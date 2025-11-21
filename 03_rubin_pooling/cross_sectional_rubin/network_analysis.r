@@ -117,8 +117,6 @@ compute_weighted_cor <- function(data, weights) {
   cov2cor(cov_mat)
 }
 
-ess_from_weights <- function(w) sum(w)^2 / sum(w^2)
-
 # Compute correlation matrices and effective sample sizes
 cormatrix_all_pre    <- compute_weighted_cor(biomarkers_qids_pre, weights_global)
 cormatrix_all_post   <- compute_weighted_cor(biomarkers_qids_post, weights_global)
@@ -127,9 +125,9 @@ cormatrix_nonrem_pre <- compute_weighted_cor(biomarkers_nonrem_pre, weights_nonr
 cormatrix_rem_post   <- compute_weighted_cor(biomarkers_rem_post, weights_rem)
 cormatrix_nonrem_post<- compute_weighted_cor(biomarkers_nonrem_post, weights_nonrem)
 
-ess_all     <- ess_from_weights(weights_global)
-ess_rem     <- ess_from_weights(weights_rem)
-ess_nonrem  <- ess_from_weights(weights_nonrem)
+ess_all     <- length(weights_global)
+ess_rem     <- length(weights_rem)
+ess_nonrem  <- length(weights_nonrem)
 
 # Network plotting function
 plot_qgraph <- function(cor_matrix, predictability, labels, groups_vec, groups, node_colors, sample_size, title = "") {
