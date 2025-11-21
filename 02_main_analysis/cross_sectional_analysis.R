@@ -264,9 +264,9 @@ cormatrix_weighted_rem_post <- cov2cor(cov_rem_post)
 cormatrix_weighted_nonrem_post <- cov2cor(cov_nonrem_post)
 
 # Effective sample size (ESS)
-ess_global  <- sum(weights_global)^2  / sum(weights_global^2)
-ess_rem     <- sum(weights_rem)^2     / sum(weights_rem^2)
-ess_nonrem  <- sum(weights_nonrem)^2  / sum(weights_nonrem^2)
+ess_global  <- length(weights_global)
+ess_rem     <- length(weights_rem)
+ess_nonrem  <- length(weights_nonrem)
 
 # Network plotting function
 plot_qgraph_with_legend <- function(cor_matrix, predictability, labels,
