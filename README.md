@@ -2,7 +2,7 @@
 
 Reproducible code for the manuscript:
 
-"Subjective and objective cognitive impairments differentially predict symptom recovery in major depressive disorder: a cross-lagged panel network analyses"
+"Subjective and objective cognitive impairments differentially predict symptom recovery in major depressive disorder: a cross-lagged panel network analyses" (manuscript submitted)
 
 This repository contains the full data-processing and analysis pipeline used to generate all figures and tables reported in the main text and supplementary materials. The workflow is organized into three stages:
 
